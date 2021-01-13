@@ -1,23 +1,25 @@
-menulist = []
-pricelist = []
-def showBill():
-    print("---Poom's Foods---")
-    for number in range(len(menulist)):
-        print(menulist[number],pricelist[number],"bath")
+menuList = []
+priceList = []
+
+def showbill():
+    print("----Poom's Shop----")
+    for i in range(len(menuList)):
+        print(menuList[i],priceList[i],"bath")
+
 def final():
-    total=0
-    for i in pricelist :
-        total = total + int(i)
+    total = 0
+    for x in range(len(priceList)) :
+        total = total + int(priceList[x])
     result = total
-    print("total =",result)
+    print("total = " , result , "Bath")
 
 while True:
-    menuName = input("please input your Menu:" )
-    if menuName.lower() == "exit":
+    menuSelect = input("please input your Menu:")
+    if menuSelect.lower() == "exit":
         break
-    else:
-        menuPrice = input("please input your Menu's Price:")
-        menulist.append(menuName)
-        pricelist.append(menuPrice)
-showBill()
+    else :
+        priceSelect = input("please input your Menu price : ")
+        menuList.append(menuSelect)
+        priceList.append(priceSelect)
+showbill()
 final()
