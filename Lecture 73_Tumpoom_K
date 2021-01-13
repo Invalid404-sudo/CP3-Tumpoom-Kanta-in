@@ -1,0 +1,28 @@
+Menu = {"1" : 30 , "2" : 20 , "3" : 25 , "4" : 30}
+MenuName2 = {"1" : "ข้าวมันไก่" , "2" : "ข้าวไข่เจียว" , "3" : "ข้าวเเกง" , "4" : "ข้าวหมกไก่" }
+menulist = []
+def showBill():
+    print("---Poom's Foods---")
+    for number in range(len(menulist)):
+        print(MenuName2[menulist[number][0]],menulist[number][1])
+def final():
+    total=0
+    for i in range(len(menulist)) :
+        total = total + int(menulist[i][1])
+    result = total
+    print("total =",result)
+
+
+print("======Our Menu======")
+print("1.ข้าวมันไก่     30 Bath")
+print("2.ข้าวไข่เจียว    20 Bath")
+print("3.ข้าวเเกง      25 Bath")
+print("4.ข้าวหมกไก่    25 Bath")
+while True:
+    menuName = input("please input your Menu by Number in front of food:" )
+    if menuName.lower() == "exit":
+        break
+    else:
+        menulist.append([menuName,Menu[menuName]])
+showBill()
+final()
